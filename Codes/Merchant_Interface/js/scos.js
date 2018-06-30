@@ -19,10 +19,20 @@ window.addEventListener("confirm_create_menu",function(event) {
 
 function create_menu_in_server(menu) {
 	var json_menu=JSON.stringify(menu);
-
-	$.post(server+'addFood',json_menu,function(data, status){
+	$.ajax({
+		headers: {
+			'Content-Type':'application/json;charset=UTF-8'
+    	},
+		type:"post",
+		url:server+'addFood',
+		data:json_menu,
+		success:function(data){
 		mui.toast("创建菜单成功");
-	})
+		}
+	});
+	/*$.post(server+'addFood',json_menu,function(data, status){
+		mui.toast("创建菜单成功");
+	})*/
 }
 
 function create_menu_in_client(menu) {
@@ -36,6 +46,9 @@ function create_menu_in_client(menu) {
 	var content_node=$(type_node).next();
 	content_node.append(menu_html);
 	content_node.find(".detailed-menu-name").last().text(menu_name);
+	menu_bind_create();
+	mui(".menu-switch").switch();
+	menu_bind_delete();
 }
 
 window.onload=function() {
@@ -56,27 +69,42 @@ function init() {
 }
 
 function read_menu_from_server() {
-	$.getJSON(server+'', function(json_menus) {
-		var menus=JSON.parse(json_menus);
-		if ($.isEmptyObject(menus)) {
-			toast("菜单为空")
-		} else {
-			show_menu_in_page_menu(menus)
+	var json_restaurant_id=JSON.stringify({"restaurant_id":restaurant_id});
+	$.ajax({
+		headers: {
+			'Content-Type':'application/json;charset=UTF-8'
+    	},
+		type:"post",
+		url:server+'restaurant',
+		data:json_restaurant_id,
+		success:function(data){
+			mui.toast("读取菜单成功")
+			show_menu_in_page_menu(data)
 		}
 	});
+	
+	/*$.post(server+'restaurant', restaurant_id, function(menus,status) {
+		if ($.isEmptyObject(menus)) {
+			mui.toast("菜单为空")
+		} else {
+			mui.toast("读取菜单成功")
+			show_menu_in_page_menu(menus)
+		}
+	});*/
 }
 
 function show_menu_in_page_menu(menus) {
 	var menu_types=get_menu_types(menus);
 	show_menu_types_in_page(menu_types);
 	var i=0;
-	for (i=0; i < menus.menu.length; ++i) {
-		create_menu_in_client(menus.menu[i]);
+	for (i=0; i < menus['data'].length; ++i) {
+		create_menu_in_client(menus['data'][i]);
 	}
 }
 
 function get_menu_types(menus) {
-	var menu=menus.menu;
+	var menu=menus['data'];
+	//var menu=menus.menu;
 	var menu_types=[];
 	for (var i=0;i<menu.length;++i) {
 		var isadded=false;
@@ -91,22 +119,32 @@ function get_menu_types(menus) {
 }
 
 function show_menu_types_in_page(menu_types) {
-	var menu_type_html='<ul class="mui-table-view"><span class="mui-switch mui-switch-blue mui-active type-switch"><span class="mui-switch-handle"></span></span> <li class="mui-table-view-cell mui-collapse"><a class="mui-navigate-right menu-type" href="#">面食</a><div class="mui-collapse-content"><button type="button" class="mui-btn mui-btn-success">添加菜品</button></div></li></ul>';
+	var menu_type_html='<ul class="mui-table-view"><span class="mui-switch mui-switch-blue mui-active type-switch"><span class="mui-switch-handle"></span></span> <li class="mui-table-view-cell mui-collapse"><a class="mui-navigate-right menu-type" href="#">未分类</a><div class="mui-collapse-content"><button type="button" class="mui-btn mui-btn-success">添加菜品</button></div></li></ul>';
 	for (var i=0;i<menu_types.length;++i) {
-		//$(".manage-store").append(menu_type_html);
-		//$(".manage-store").find(".menu_type").text(menu_types[i]);
-		
-		$(".create-type").before(menu_type_html);
-		$(".create-type").prev().find(".menu-type").text(menu_types[i]);
+		//$(".create-type").before(menu_type_html);
+		//$(".create-type").prev().find(".menu-type").text(menu_types[i]);
+		create_type(menu_types[i])
 	}
 }
 
 function read_orders_from_server() {
 	var json_restaurant_id=JSON.stringify({"restaurant_id":restaurant_id});
-	$.post(server+'receiveAllOrders',json_restaurant_id,function(data, status){
+	$.ajax({
+		headers: {
+			'Content-Type':'application/json;charset=UTF-8'
+    	},
+		type:"post",
+		url:server+'receiveAllOrders',
+		data:json_restaurant_id,
+		success:function(data){
+			mui.toast("读取订单成功")
+			show_orders_in_page_history(data['data'])
+		}
+	});
+	/*$.post(server+'receiveAllOrders',json_restaurant_id,function(data, status){
 		mui.toast("读取订单成功");
 		show_orders_in_page_history(data['data']);
-	})
+	})*/
 }
 
 function show_orders_in_page_history(orders) {
@@ -128,7 +166,6 @@ function show_orders_in_page_history(orders) {
 		
 		var order_content=order.find(".order-content");
 		var menus=JSON.parse(orders[j]['menu']);
-		alert(menus.length)
 		for (var i=0;i<menus.length;++i) {
 			order_content.prepend(menu_line);
 			var menu_inserted=order_content.children()[0];
@@ -167,9 +204,17 @@ function delete_menu_from_page(menu) {
 }
 
 function delete_menu_in_server(name) {
-	var json_menu_name=JSON.stringify({"restaurant_id":"test_restraurant","food_name":name})
-	$.post(server+'deleteFood', json_menu_name ,function(result) {
-		mui.toast("从后台删除成功");
+	var json_menu_name=JSON.stringify({"restaurant_id":restaurant_id,"food_name":name})
+	$.ajax({
+		headers: {
+			'Content-Type':'application/json;charset=UTF-8'
+    	},
+		type:"post",
+		url:server+'deleteFood',
+		data:json_menu_name,
+		success:function(data){
+			mui.toast("从数据库删除菜单")
+		}
 	});
 }
 
@@ -222,7 +267,6 @@ function menu_type_bind_create() {
 		mui.prompt("请输入新的类别名字","类别名字","创建类别",["确定","取消"],function(e) {
 					if (e.index==1) {
 						mui.toast("取消创建");
-						this.switch().toggle();
 					}else{
 						create_type(e.value)
 					}
@@ -278,37 +322,54 @@ function listen_orders_from_server() {
 	window.setInterval(get_orders,1000*interval);
 }
 function get_orders() {
-	$.post(server+'receiveOrder', function(json_orders) {
+	var time = new Date();
+	var json_restaurant_id=JSON.stringify({"restaurant_id":restaurant_id, order_time: time});
+	alert(json_restaurant_id)
+	$.ajax({
+		headers: {
+			'Content-Type':'application/json;charset=UTF-8'
+    	},
+		type:"post",
+		url:server+'receiveOrders',
+		data:json_restaurant_id,
+		success:function(data){
+			mui.toast("收到新的订单")
+			alert(JSON.stringify(data))
+			show_order_in_page_new_order(data['data'][0])
+		}
+	});
+	/*$.post(server+'receiveOrder', function(json_orders) {
 		var orders=JSON.parse(json_orders);
 		if ($.isEmptyObject(orders)) {
 			//do nothing
 		} else {
 			show_order_in_page_new_order(orders)
 		}
-	});
+	});*/
 }
 
 function show_order_in_page_new_order(orders) {
-	var order_num=orders.order_num, table_num=orders.table_num, order_time=orders.order_time, menu=orders.menu, table_num=orders.table_num, total_price=orders.total_price;
-	menu=JSON.parse(menu);
-	var order_html='<div class="order"><h1 class="order-title"><span class="table-num"> 7</span><span>号桌 </span><span class="order-state">已下单</span></h1><h3>订单号：<span class="order-seq-num"></span></h3><h3>下单时间：<span class="order-time"></span></h3><hr /><div class="order-content"><h2 class="menu-total"> <span>共</span><span class="total-num">3</span><span>件商品，实付￥</span><span class="total-price"></span></h2><h2><button class="accept-order">确认</button></h2></div><hr /></div>';
+	var order_num=orders.order_num,table_num=orders.table_num, order_time=orders.order_time, menu=orders.menu, total_num=orders.total_num, total_price=orders.total_price;
+	
+	var order_html='<div class="order"><h1 class="order-title"><span class="table-num"> 7</span><span>号桌 </span><span class="order-state">已下单</span></h1><h3>订单号：<span class="order-seq-num"></span></h3><h3>下单时间：<span class="order-time"></span></h3><hr /><div class="order-content"><h2 class="menu-total"> <span>共</span><span class="total-num">3</span><span>件商品，实付￥</span><span class="total-price"></span></h2></div><hr /></div>';
 	var menu_line='<h2 class="menu-line"><span class="menu-name"></span><span class="menu-price">￥13</span><span class="menu-num">x 2</span></h2>';	
 	$(".new-order").prepend(order_html);
-	var order=$(".new-order").firstChild();
-	order.filter(".order-num").text(order_num);
-	order.filter(".order-time").text(order_time);
-	order.filter(".table-num").text(table_num);
-	order.filter(".order-seq-num").text(order_num);
-	order.filter(".total-num").text(total_num);
-	order.filter(".total-price").text(total_num);
+	var order=$(".new-order .order").first();
+	order.find(".order-num").text(order_num);
+	order.find(".order-time").text(order_time);
+	order.find(".table-num").text(table_num);
+	order.find(".order-seq-num").text(order_num);
+	order.find(".total-num").text(total_num);
+	order.find(".total-price").text(total_num);
 	
 	var order_content=order.find(".order-content");
-	for (var i=0;i<menu.length;++i) {
+	var menus=JSON.parse(orders.menu);
+	for (var i=0;i<menus.length;++i) {
 		order_content.prepend(menu_line);
-		var menu_inserted=order_content.firstChild();
-		menu_inserted.filter(".menu-name").text(menu[i].food_name);
-		menu_inserted.filter(".menu-price").text("￥"+menu[i].food_price);
-		menu_inserted.filter(".menu-num").text("x "+menu[i].food_num);
+		var menu_inserted=order_content.children()[0];
+		$(menu_inserted).find(".menu-name").text(menus[i].food_name);
+		$(menu_inserted).find(".menu-price").text("￥"+menus[i].food_price);
+		$(menu_inserted).find(".menu-num").text("x "+menus[i].food_num);
 	}
 }
 

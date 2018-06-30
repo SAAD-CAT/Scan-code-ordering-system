@@ -23,12 +23,12 @@ function bind_confirm() {
         images.src=$("#userImg")[0].src;
 		var menu_picture=getBase64Image(images);
 		mui.fire(mainPage,"confirm_create_menu",{
-			"restaurant_id":restaurant_id,
-            "food_name":menu_name,
-            "food_type":menu_type,
-            "food_price":menu_price,
-            "food_description":menu_description,
-            "picture_url":menu_picture
+			restaurant_id:restaurant_id,
+            food_name:menu_name,
+            food_type:menu_type,
+            food_price:menu_price,
+            food_description:menu_description,
+            picture_url:menu_picture
         });
         mui.back();
 	})
