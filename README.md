@@ -14,7 +14,7 @@ Romance cloud catering service platform
 | 15331342 | Exocoetidate-Xuyouri  |  技术   | JavaScript工程师，后端工程师 | 下午班  |
 | 14331133 | 李啟明  |  技术   |        后端工程师        | 下午班  |
 | 15331443 | 朱文豪  |  技术   |     后端工程师，数据库维护     | 下午班  |
-| 15331049 | 成文超  | 产品/技术 |        测试工程师        | 上午班  |
+| 15331049 | chengwch  | 产品 |        需求分析与设计        | 上午班  |
 
 **团队作业**
 * 1、[About(项目规划)](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/project%20planning.md)
@@ -54,6 +54,7 @@ Romance cloud catering service platform
   * [Exocoetidate-Xuyouri 15331342-report](https://blog.csdn.net/qq_40127318/article/details/80870517)
   * [苏瀚添15331280-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/suhantian_15331280/FinalReport.md)
   * [杨育培15331369-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/yangyupei_15331369/report.md)
+  * [chengwch15331049-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/chengwch_15331049/report.md)
 * XX 建模练习
   * XX1 [应用_淘宝网购业务流程](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/lesson9_XX%E5%BB%BA%E6%A8%A1%E7%BB%83%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E6%8F%8F%E8%BF%B0%E6%96%87%E6%A1%A3.pdf)
   * XX2 [建模要求](https://github.com/SAAD-CAT/Scan-code-ordering-system/tree/master/Documents/lesson9_XX%E5%BB%BA%E6%A8%A1%E7%BB%83%E4%B9%A0)
