@@ -22,5 +22,11 @@
 |Process Improvement Plan |	提出过程改进计划                |   3                    |	        5             |
 |Summary                  |	合计                           |	  53	               |          64           |
 
-###三、个人分支的git统计报告
-![avatar](/home/picture/1.png)
+### 三、个人分支的git统计报告
+![avatar](/images/GIT_1.png)
+![avatar](/images/GIT_2.png)
+
+### 四、个人体会
+通过对前端web的开发，对前端框架等有了更深的体会，同时也懂得了如何更好的与后端开发人员沟通和对接。
+
+### 五、个人技术博客
