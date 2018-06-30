@@ -13,8 +13,7 @@ window.addEventListener("confirm_create_menu",function(event) {
 	var menu=event.detail;
 	create_menu_in_server(menu);
 	create_menu_in_client(menu);
-	mui(".menu-switch").switch();
-	menu_bind_delete();
+	
 })
 
 function create_menu_in_server(menu) {
@@ -46,9 +45,9 @@ function create_menu_in_client(menu) {
 	var content_node=$(type_node).next();
 	content_node.append(menu_html);
 	content_node.find(".detailed-menu-name").last().text(menu_name);
-	menu_bind_create();
+	/*menu_bind_create();
 	mui(".menu-switch").switch();
-	menu_bind_delete();
+	menu_bind_delete();*/
 }
 
 window.onload=function() {
@@ -100,6 +99,9 @@ function show_menu_in_page_menu(menus) {
 	for (i=0; i < menus['data'].length; ++i) {
 		create_menu_in_client(menus['data'][i]);
 	}
+	menu_bind_create();
+	mui(".menu-switch").switch();
+	menu_bind_delete();
 }
 
 function get_menu_types(menus) {
@@ -125,6 +127,9 @@ function show_menu_types_in_page(menu_types) {
 		//$(".create-type").prev().find(".menu-type").text(menu_types[i]);
 		create_type(menu_types[i])
 	}
+	menu_bind_create();
+	mui(".type-switch").switch();
+	menu_type_bind_delete()
 }
 
 function read_orders_from_server() {
@@ -301,9 +306,9 @@ function create_type(type_name) {
 	var menu_type_html='<ul class="mui-table-view"><span class="mui-switch mui-switch-blue mui-active type-switch"><span class="mui-switch-handle"></span></span> <li class="mui-table-view-cell mui-collapse"><a class="mui-navigate-right menu-type" href="#">面食</a><div class="mui-collapse-content"><button type="button" class="mui-btn mui-btn-success">添加菜品</button><hr /></div></li></ul>';
 	$(".create-type").before(menu_type_html);
 	$(".create-type").prev().find(".menu-type").text(type_name);
-	menu_bind_create();
+	/*menu_bind_create();
 	mui(".type-switch").switch();
-	menu_type_bind_delete();
+	menu_type_bind_delete();*/
 }
 function show_menu_by_type(menu) {
 	var types=$(".menu-type");
