@@ -29,7 +29,7 @@
 |事后总结,提出过程改进计划|  |10|
 
 ### GIT统计报告
-
+![](https://raw.githubusercontent.com/SAAD-CAT/Scan-code-ordering-system/master/report/suhantian_15331280/git_sht.png)
 
 ### 自认为最得意/或有价值/或有苦劳的工作清单
 - 补全项目需要的用例图或者模型图
