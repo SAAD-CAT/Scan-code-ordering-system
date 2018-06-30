@@ -47,9 +47,16 @@ apt-get install npm -y
 
 
 ## 对mongoDB进行操作
-### 查看存在的数据库
 ### 进入数据库
+![](images/enter_mongdb.png)
+### 查看存在的数据库
+![](images/show_db.png)
+### 进入数据库
+![](images/use_db.png)
 ### 查看该数据库下的表
+![](images/show_collections.png)
 ### 查看该表下的数据
+![](images/db_find_data.png)
 ### 删除该表下的数据
+![](images/db_remove_data.png)
 
