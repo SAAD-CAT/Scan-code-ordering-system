@@ -44,6 +44,7 @@ Romance cloud catering service platform
 * 8、生产规范与指南
   * 8.1 [代码规范](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/code_speci.md)
   * 8.2 [REST API 设计规范](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/rest-api-desn.md)
+  * 8.3 [逻辑架构到应用程序映射指南](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/map_guide.md)
 * X1 meet_recording
   * [inception meeting (part 1)](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/meeting-record.md)
   * [inception meeting (part 2)](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/meeting-record2.md)
