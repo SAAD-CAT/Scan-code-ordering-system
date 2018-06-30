@@ -324,7 +324,6 @@ function listen_orders_from_server() {
 function get_orders() {
 	var time = new Date();
 	var json_restaurant_id=JSON.stringify({"restaurant_id":restaurant_id, order_time: time});
-	alert(json_restaurant_id)
 	$.ajax({
 		headers: {
 			'Content-Type':'application/json;charset=UTF-8'
@@ -334,7 +333,8 @@ function get_orders() {
 		data:json_restaurant_id,
 		success:function(data){
 			mui.toast("收到新的订单")
-			alert(JSON.stringify(data))
+			mui.toast(JSON.stringify(data))
+			if (data['data'].length>0)
 			show_order_in_page_new_order(data['data'][0])
 		}
 	});
@@ -360,16 +360,16 @@ function show_order_in_page_new_order(orders) {
 	order.find(".table-num").text(table_num);
 	order.find(".order-seq-num").text(order_num);
 	order.find(".total-num").text(total_num);
-	order.find(".total-price").text(total_num);
+	order.find(".total-price").text(total_price);
 	
 	var order_content=order.find(".order-content");
 	var menus=JSON.parse(orders.menu);
 	for (var i=0;i<menus.length;++i) {
 		order_content.prepend(menu_line);
 		var menu_inserted=order_content.children()[0];
-		$(menu_inserted).find(".menu-name").text(menus[i].food_name);
-		$(menu_inserted).find(".menu-price").text("￥"+menus[i].food_price);
-		$(menu_inserted).find(".menu-num").text("x "+menus[i].food_num);
+		$(menu_inserted).find(".menu-name").text(decodeURI(menus[i].menu_name));
+		$(menu_inserted).find(".menu-price").text("￥"+menus[i].price);
+		$(menu_inserted).find(".menu-num").text("x "+menus[i].num);
 	}
 }
 
