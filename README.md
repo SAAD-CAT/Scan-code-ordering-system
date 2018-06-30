@@ -50,6 +50,7 @@ Romance cloud catering service platform
 * X2 Tech/Work Report
   * [李启明14331133-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/liqiming14331133/personal_report.md)
   * [朱文豪15331443-report](http://zhuwh9.xyz/final-report)
+  * [许友日15331342-report](https://blog.csdn.net/qq_40127318/article/details/80870517)
 * XX 建模练习
   * XX1 [应用_淘宝网购业务流程](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/lesson9_XX%E5%BB%BA%E6%A8%A1%E7%BB%83%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E6%8F%8F%E8%BF%B0%E6%96%87%E6%A1%A3.pdf)
   * XX2 [建模要求](https://github.com/SAAD-CAT/Scan-code-ordering-system/tree/master/Documents/lesson9_XX%E5%BB%BA%E6%A8%A1%E7%BB%83%E4%B9%A0)
