@@ -11,7 +11,7 @@ Romance cloud catering service platform
 | :------: | :--: | :---: | :-----------------: | :--: |
 | 15331369 | YYPyyp  |  技术   |     技术经理，前端工程师      | 下午班  |
 | 15331280 | 苏瀚添  |  产品   |      产品经理，产品设计      | 下午班  |
-| 15331342 | 许友日  |  技术   | JavaScript工程师，后端工程师 | 下午班  |
+| 15331342 | Exocoetidate-Xuyouri  |  技术   | JavaScript工程师，后端工程师 | 下午班  |
 | 14331133 | 李啟明  |  技术   |        后端工程师        | 下午班  |
 | 15331443 | 朱文豪  |  技术   |     后端工程师，数据库维护     | 下午班  |
 | 15331049 | 成文超  | 产品/技术 |        测试工程师        | 上午班  |
@@ -51,7 +51,7 @@ Romance cloud catering service platform
 * X2 Tech/Work Report
   * [李启明14331133-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/liqiming14331133/personal_report.md)
   * [朱文豪15331443-report](http://zhuwh9.xyz/final-report)
-  * [许友日15331342-report](https://blog.csdn.net/qq_40127318/article/details/80870517)
+  * [Exocoetidate-Xuyouri 15331342-report](https://blog.csdn.net/qq_40127318/article/details/80870517)
   * [苏瀚添15331280-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/suhantian_15331280/FinalReport.md)
   * [杨育培15331369-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/yangyupei_15331369/report.md)
 * XX 建模练习
