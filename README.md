@@ -42,7 +42,7 @@ Romance cloud catering service platform
     * 7.5.1 [Order case design](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/order_ucase_design.md)
     * 7.5.2 [ChangeList case design](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/change_ucase_design.md)
 * 8、生产规范与指南
-  * 8.1 XX 代码规范
+  * 8.1 [代码规范](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/code_speci.md)
   * 8.2 [REST API 设计规范](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/rest-api-desn.md)
 * X1 meet_recording
   * [inception meeting (part 1)](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/meeting-record.md)
