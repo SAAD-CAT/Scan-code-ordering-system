@@ -9,134 +9,87 @@
 		<title>食品安全档案</title>
 		<script src="js/mui.min.js"></script>
 		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/index.js"></script>
+		<!--<script src="js/index2.js"></script>-->
+		<script src="js/order.js"></script>
 		<link href="css/mui.min.css" rel="stylesheet" />
-		<link href="css/CAT.css" type="text/css" rel="stylesheet" />
+		
 		
 		<style>
 			#mui-scroll-column3 {
 				position: absolute;
-				top: 50px;
-				left: 20px;
-				height: 250px;
-				width: 300px;
+				top: 120px;
+				height: 200px;
+				width: 3650px;
 				float: right;
+				overflow: hidden;
+			}
+			.order_food_num {
+				margin-left: 40px;
+				font-size: small;
+				color: #7CC4E7;
+			}
+			.order_total_num {
+				margin-left: 20px;
+				color: #7CC4E7;
+			}
+			.order_food_name {
+				color: #D0D0D0;
+			}
+			.order_food_price {
+				color: #F0AD4E;
+			}
+			.order_total_money {
+				color: #F0AD4E;
+			}
+			
+			.table_num {
+				float: left;
+			}
+			.order_time {
+				margin-left: 20px;
 			}
 		</style>
 		
 	</head>
 
-	<body>
+	<body background="image/星空背景.jpg">
 		<h3><b>CAT美味餐饮</b></h3>
+		<p>订单详情</p>
+		<div style="height: 40px; width: 365px;">
+		<span class="table_num"></span>
+		<span class="order_time"></span>
+		</div>
 		<div id="mui-scroll-column3" class="mui-scroll-wrapper">
-			<div class="mui-scroll">
-				<div class="js-mui-control-item3" style="height: 130px;"></div>
-				<div class="js-mui-control-item3" style="height: 130px;"></div>
-				<div class="js-mui-control-item3" style="height: 130px;"></div>
-				<div class="js-mui-control-item3" style="height: 130px;"></div>
-				<div class="js-mui-control-item3" style="height: 130px;"></div>
-				<div class="js-mui-control-item3" style="height: 130px;"></div>
-				<div class="js-mui-control-item3" style="height: 130px;"></div>
-				<div class="js-mui-control-item3" style="height: 130px;"></div>
-				<div class="js-mui-control-item3" style="height: 130px;"></div>
-			</div>
-			<div>
-				<p class="order_total_money"></p>
-				<p class="order_total_num"></p>
+			<div id="foodOrder" class="mui-scroll" style="height: 800px; width: 365px;">
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
 			</div>
 		</div>
 		
+		<div id="foodPrice" style="height: 100px; width: 365px; position: absolute; top: 340px;">
+			<span class="order_total_money" style="height: 40px;"></span>
+			<span class="order_total_num" style="height: 40px;"></span>
+		</div>
 		
-		
-		<script src="js/mui.min.js"></script>
+	
 		<script type="text/javascript" charset="utf-8">
 			mui.init({
 				swipeBack: true //启用右滑关闭功能
 			});
 			(function($) {
-				$('#mui-scroll-column1').scroll({
+				$('#mui-scroll-column3').scroll({
 					indicators: true //是否显示滚动条
 
 				});
-				$('#mui-scroll-column2').scroll({
-					indicators: true //是否显示滚动条
-				});
-
 			})(mui);
 		</script>
 	</body>
 
 </html>
-<!--
-	/*
-	(function($) { 
-    // the code of this function is from 
-    // http://lucassmith.name/pub/typeof.html 
-    $.type = function(o) { 
-        var _toS = Object.prototype.toString; 
-        var _types = { 
-            'undefined': 'undefined', 
-            'number': 'number', 
-            'boolean': 'boolean', 
-            'string': 'string', 
-            '[object Function]': 'function', 
-            '[object RegExp]': 'regexp', 
-            '[object Array]': 'array', 
-            '[object Date]': 'date', 
-            '[object Error]': 'error' 
-        }; 
- 
-        return _types[typeof o] || _types[_toS.call(o)] || (o ? 'object' : 'null'); 
-    }; 
- 
-    // the code of these two functions is from mootools 
-    // http://mootools.net 
-    var $specialChars = { '\b': '\\b', '\t': '\\t', '\n': '\\n', '\f': '\\f', '\r': '\\r', '"': '\\"', '\\': '\\\\' }; 
-    var $replaceChars = function(chr) { 
-        return $specialChars[chr] || '\\u00' + Math.floor(chr.charCodeAt() / 16).toString(16) + (chr.charCodeAt() % 16).toString(16); 
-    }; 
- 
-    $.toJSON = function(o) { 
-        var s = []; 
-        switch ($.type(o)) { 
-            case 'undefined': 
-                return 'undefined'; 
-                break; 
-            case 'null': 
-                return 'null'; 
-                break; 
-            case 'number': 
-            case 'boolean': 
-            case 'date': 
-            case 'function': 
-                return o.toString(); 
-                break; 
-            case 'string': 
-                return '"' + o.replace(/[\x00-\x1f\\"]/g, $replaceChars) + '"'; 
-                break; 
-            case 'array': 
-                for (var i = 0, l = o.length; i < l; i++) { 
-                    s.push($.toJSON(o[i])); 
-                } 
-                return '[' + s.join(',') + ']'; 
-                break; 
-            case 'error': 
-            case 'object': 
-                for (var p in o) { 
-                    s.push(p + ':' + $.toJSON(o[p])); 
-                } 
-                return '{' + s.join(',') + '}'; 
-                break; 
-            default: 
-                return ''; 
-                break; 
-        } 
-    }; 
- 
-    $.evalJSON = function(s) { 
-        if ($.type(s) != 'string' || !s.length) return null; 
-        return eval('(' + s + ')'); 
-    }; 
-})(jQuery);
-*/
--->
