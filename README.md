@@ -53,7 +53,7 @@ Romance cloud catering service platform
   * [朱文豪15331443-report](http://zhuwh9.xyz/final-report)
   * [Exocoetidate-Xuyouri 15331342-report](https://blog.csdn.net/qq_40127318/article/details/80870517)
   * [sysuts13-15331280-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/suhantian_15331280/FinalReport.md)
-  * [杨育培15331369-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/yangyupei_15331369/report.md)
+  * [YYPyyp-15331369-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/yangyupei_15331369/report.md)
   * [chengwch15331049-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/chengwch_15331049/report.md)
 * XX 建模练习
   * XX1 [应用_淘宝网购业务流程](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/lesson9_XX%E5%BB%BA%E6%A8%A1%E7%BB%83%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E6%8F%8F%E8%BF%B0%E6%96%87%E6%A1%A3.pdf)
