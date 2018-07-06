@@ -125,5 +125,76 @@
 				}
 			}
 		}
+	},
+	"dependencies": {
+		"pages": {
+			"index.html": {
+				"resources": [
+					"image/时钟.jpg",
+					"image/配送员.jpg",
+					"image/盾牌.jpg",
+					"image/电话.jpg",
+					"image/地址.jpg"
+				],
+				"refer": [
+					"order.html"
+				],
+				"priority": 0
+			},
+			"order.html": {
+				"resources": [
+					"image/星空背景.jpg"
+				],
+				"refer": [
+					"index.html"
+				],
+				"priority": 0
+			}
+		},
+		"idle": {
+			"resources": [
+				"image/IMG_3446.PNG",
+				"css/jquery.mobile-1.4.5.min.css",
+				"security-document.html",
+				"js/index2.js",
+				"image/rice.png",
+				"js/jquery.mobile-1.4.5.min.js",
+				"js/mui.min.js",
+				"image/蒜蓉菜心.PNG",
+				"image/鹅肠.PNG",
+				"image/矿泉水.PNG",
+				"image/photo2.png",
+				"image/蛋炒西红柿.PNG",
+				"image/加多宝.PNG",
+				"image/雪碧.PNG",
+				"js/jquery-3.3.1.min.js",
+				"js/mui.js",
+				"image/IMG_3450.PNG",
+				"image/经营资格证2.png",
+				"css/jquery.mobile-1.3.2.min.css",
+				"image/鲜虾.PNG",
+				"image/米饭.PNG",
+				"image/西兰花炒牛肉.PNG",
+				"image/photo3.png",
+				"image/IMG_3448.PNG",
+				"fonts/mui.ttf",
+				"image/photo1.png",
+				"image/IMG_3451.PNG",
+				"css/mui.css",
+				"image/热狗.PNG",
+				"image/食品安全等级.png",
+				"image/IMG_3456.PNG",
+				"image/经营资格证1.png",
+				"css/mui.min.css",
+				"image/寿司.PNG",
+				"image/鸡排.PNG",
+				"image/鸭翅.PNG",
+				"image/photo4.png",
+				"image/可口可乐.PNG",
+				"image/凉拌金针菇.PNG",
+				"css/CAT.css",
+				"js/index.js"
+			]
+		}
 	}
 }

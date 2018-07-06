@@ -10,10 +10,10 @@ Romance cloud catering service platform
 |    学号    |  姓名  |  方向   |         职位          |  班别  |
 | :------: | :--: | :---: | :-----------------: | :--: |
 | 15331369 | YYPyyp  |  技术   |     技术经理，前端工程师      | 下午班  |
-| 15331280 | 苏瀚添  |  产品   |      产品经理，产品设计      | 下午班  |
+| 15331280 | sysuts13  |  产品   |      产品经理，产品设计      | 下午班  |
 | 15331342 | Exocoetidate-Xuyouri  |  技术   | JavaScript工程师，后端工程师 | 下午班  |
 | 14331133 | 李啟明  |  技术   |        后端工程师        | 下午班  |
-| 15331443 | 朱文豪  |  技术   |     后端工程师，数据库维护     | 下午班  |
+| 15331443 | zhuwh9  |  技术   |     后端工程师，数据库维护     | 下午班  |
 | 15331049 | chengwch  | 产品 |        需求分析与设计        | 上午班  |
 
 **团队作业**
@@ -50,10 +50,10 @@ Romance cloud catering service platform
   * [inception meeting (part 2)](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/meeting-record2.md)
 * X2 Tech/Work Report
   * [李启明14331133-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/liqiming14331133/personal_report.md)
-  * [朱文豪15331443-report](http://zhuwh9.xyz/final-report)
+  * [zhuwh9-15331443-report](http://zhuwh9.xyz/final-report)
   * [Exocoetidate-Xuyouri 15331342-report](https://blog.csdn.net/qq_40127318/article/details/80870517)
-  * [苏瀚添15331280-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/suhantian_15331280/FinalReport.md)
-  * [杨育培15331369-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/yangyupei_15331369/report.md)
+  * [sysuts13-15331280-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/suhantian_15331280/FinalReport.md)
+  * [YYPyyp-15331369-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/yangyupei_15331369/report.md)
   * [chengwch15331049-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/chengwch_15331049/report.md)
 * XX 建模练习
   * XX1 [应用_淘宝网购业务流程](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/lesson9_XX%E5%BB%BA%E6%A8%A1%E7%BB%83%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E6%8F%8F%E8%BF%B0%E6%96%87%E6%A1%A3.pdf)

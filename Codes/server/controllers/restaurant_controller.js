@@ -108,7 +108,7 @@ exports.addFood = function(req, res) {
 	var food_type = req.body.food_type;
 	var food_price = req.body.food_price;
 	var food_description = req.body.food_description;
-	var picture_url = "/static/foods/images/" + req.body.picture_url;
+	var picture_url = req.body.picture_url;
 
 	/*
 	* check if repeated, if not then add it to database
