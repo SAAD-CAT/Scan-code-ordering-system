@@ -29,7 +29,7 @@ function bind_confirm() {
             food_price:menu_price,
             food_description:menu_description,
             picture_url:menu_picture
-        });
+       });
         mui.back();
 	})
 }

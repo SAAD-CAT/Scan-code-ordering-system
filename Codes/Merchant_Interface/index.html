@@ -10,6 +10,22 @@
     <link href="css/mui.min.css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
     <script src="js/scos.js"></script>
+    <script type="text/javascript" charset="utf-8">
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			
+			(function($) {
+				$('#mui-scroll-column1').scroll({
+					indicators: true //是否显示滚动条
+
+				});
+				$('#mui-scroll-column2').scroll({
+					indicators: true //是否显示滚动条
+				});
+
+			})(mui);
+		</script>
 </head>
 <body>
 	<header class="mui-bar mui-bar-nav">
@@ -19,6 +35,7 @@
 		</h1>
 		<!--消息图标-->
 		<div class="messages_img"><img src="imgs/messages.jpg"/> </div>
+		</header>
 		<div class="mui-content">
 		    <div class="mui-slider">
 		    	<div class="mui-slider-group" id="slider-img">
@@ -42,6 +59,7 @@
 		    		</div>!-->
 		    	</div>
 		    </div>
+		    
 		    
 		    <div class="tab-div new-order">
 		    	<!--<div class="order">
@@ -105,6 +123,6 @@
 		    	</a>
 		    </nav>
 		</div>
-	</header>
+	
 </body>
 </html>

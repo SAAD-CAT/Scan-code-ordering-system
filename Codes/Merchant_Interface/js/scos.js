@@ -45,9 +45,6 @@ function create_menu_in_client(menu) {
 	var content_node=$(type_node).next();
 	content_node.append(menu_html);
 	content_node.find(".detailed-menu-name").last().text(menu_name);
-	/*menu_bind_create();
-	mui(".menu-switch").switch();
-	menu_bind_delete();*/
 }
 
 window.onload=function() {
@@ -101,6 +98,7 @@ function show_menu_in_page_menu(menus) {
 	}
 	menu_bind_create();
 	mui(".menu-switch").switch();
+	menu_unbind_delete();
 	menu_bind_delete();
 }
 
@@ -129,6 +127,7 @@ function show_menu_types_in_page(menu_types) {
 	}
 	menu_bind_create();
 	mui(".type-switch").switch();
+	menu_type_unbind_delete()
 	menu_type_bind_delete()
 }
 
@@ -222,6 +221,15 @@ function delete_menu_in_server(name) {
 		}
 	});
 }
+function menu_unbind_delete() {
+	var menu_switchs = $(".menu-switch");
+	menu_switchs.unbind("toggle");
+}
+
+function menu_type_unbind_delete() {
+	var type_switchs = $(".type-switch");
+	type_switchs.unbind("toggle");
+}
 
 function menu_bind_create() {
 	//mui('.bottomPopover').popover('show', $("manage-store")[0]);
@@ -291,7 +299,6 @@ function menu_type_bind_delete() {
 				mui.confirm("确认删除该类别吗？","提醒",["否","是"],function(e) {
 					if (e.index==1) {
 						delete_menu_from_page(that.parentNode);
-						delete_menu_in_server($(that).prev().text());
 						mui.toast("删除成功");
 					}else{
 					mui.toast("取消删除");
@@ -306,9 +313,10 @@ function create_type(type_name) {
 	var menu_type_html='<ul class="mui-table-view"><span class="mui-switch mui-switch-blue mui-active type-switch"><span class="mui-switch-handle"></span></span> <li class="mui-table-view-cell mui-collapse"><a class="mui-navigate-right menu-type" href="#">面食</a><div class="mui-collapse-content"><button type="button" class="mui-btn mui-btn-success">添加菜品</button><hr /></div></li></ul>';
 	$(".create-type").before(menu_type_html);
 	$(".create-type").prev().find(".menu-type").text(type_name);
-	/*menu_bind_create();
+	menu_bind_create();
 	mui(".type-switch").switch();
-	menu_type_bind_delete();*/
+	menu_type_unbind_delete();
+	//menu_type_bind_delete();
 }
 function show_menu_by_type(menu) {
 	var types=$(".menu-type");
@@ -337,10 +345,10 @@ function get_orders() {
 		url:server+'receiveOrders',
 		data:json_restaurant_id,
 		success:function(data){
-			mui.toast("收到新的订单")
-			mui.toast(JSON.stringify(data))
-			if (data['data'].length>0)
-			show_order_in_page_new_order(data['data'][0])
+			if (data['data'].length>0) {
+				mui.toast("收到新的订单")
+				show_order_in_page_new_order(data['data'][0])
+			}
 		}
 	});
 	/*$.post(server+'receiveOrder', function(json_orders) {
