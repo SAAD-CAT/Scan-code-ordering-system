@@ -14,11 +14,26 @@ module.exports = function(app) {
 	***************************************************************************/
 
 	//render home page
-	app.get('/', function(req, res) {
+	app.get('/test', function(req, res) {
 		console.log('Wecome!');
-		//res.render('');
+		res.render('home/home.html');
 	});
-
+	
+	// render index page
+	app.get('/restaurant', function(req, res) {
+		res.render('index/index.html');
+	});
+	
+	// render order page
+	app.get('/renderOrder', function(req, res) {
+		res.render('order/order.html');
+	});
+	
+	// render security-document
+	app.get('/renderSecurityDocument', function(req, res) {
+		res.render('security-document/security-document.html');
+	});
+	
 	//render food lists
 	app.post('/restaurant',  restaurant.getRestaurantData);
 
