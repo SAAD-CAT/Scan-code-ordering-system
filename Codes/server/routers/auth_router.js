@@ -16,22 +16,22 @@ module.exports = function(app) {
 	//render home page
 	app.get('/test', function(req, res) {
 		console.log('Wecome!');
-		res.render('home/home.html');
+		res.render('home/home');
 	});
 	
 	// render index page
 	app.get('/restaurant', function(req, res) {
-		res.render('index/index.html');
+		res.render('index/index');
 	});
 	
 	// render order page
 	app.get('/renderOrder', function(req, res) {
-		res.render('order/order.html');
+		res.render('order/order');
 	});
 	
 	// render security-document
 	app.get('/renderSecurityDocument', function(req, res) {
-		res.render('security-document/security-document.html');
+		res.render('security-document/security-document');
 	});
 	
 	//render food lists
