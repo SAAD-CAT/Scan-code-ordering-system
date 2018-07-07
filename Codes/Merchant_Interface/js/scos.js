@@ -331,7 +331,7 @@ function show_menu_by_type(menu) {
 }
 
 function listen_orders_from_server() {
-	var interval=10;
+	var interval=5;
 	window.setInterval(get_orders,1000*interval);
 }
 function get_orders() {
@@ -364,7 +364,7 @@ function get_orders() {
 function show_order_in_page_new_order(orders) {
 	var order_num=orders.order_num,table_num=orders.table_num, order_time=orders.order_time, menu=orders.menu, total_num=orders.total_num, total_price=orders.total_price;
 	
-	var order_html='<div class="order"><h1 class="order-title"><span class="table-num"> 7</span><span>号桌 </span><span class="order-state">已下单</span></h1><h3>订单号：<span class="order-seq-num"></span></h3><h3>下单时间：<span class="order-time"></span></h3><hr /><div class="order-content"><h2 class="menu-total"> <span>共</span><span class="total-num">3</span><span>件商品，实付￥</span><span class="total-price"></span></h2></div><hr /></div>';
+	var order_html='<div class="order"><h1 class="order-title"><span class="table-num"> 7</span><span>号桌 </span><span class="order-state">已下单</span></h1><h3>订单号：<span class="order-seq-num"></span></h3><h3>下单时间：<span class="order-time"></span></h3><hr /><div class="order-content"><h2 class="menu-total"> <span>共</span><span class="total-num">3</span><span>件商品，实付￥</span><span class="total-price"></span></h2><h2><button class="accept-order">确认</button></h2></div><hr /></div>';
 	var menu_line='<h2 class="menu-line"><span class="menu-name"></span><span class="menu-price">￥13</span><span class="menu-num">x 2</span></h2>';	
 	$(".new-order").prepend(order_html);
 	var order=$(".new-order .order").first();
@@ -374,6 +374,10 @@ function show_order_in_page_new_order(orders) {
 	order.find(".order-seq-num").text(order_num);
 	order.find(".total-num").text(total_num);
 	order.find(".total-price").text(total_price);
+	order.find(".accept-order")[0].addEventListener("tap",function () {
+			move_order_to_dealed_list(this);
+			$(this).remove();
+		});
 	
 	var order_content=order.find(".order-content");
 	var menus=JSON.parse(orders.menu);
