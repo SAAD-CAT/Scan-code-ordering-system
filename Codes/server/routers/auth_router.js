@@ -14,9 +14,9 @@ module.exports = function(app) {
 	***************************************************************************/
 
 	//render home page
-	app.get('/', function(req, res) {
+	app.get('/test', function(req, res) {
 		console.log('Wecome!');
-		//res.render('');
+		res.render('home/home.html');
 	});
 	
 	// render index page
