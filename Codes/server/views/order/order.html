@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>食品安全档案</title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/order.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		
+		
+		<style>
+			#mui-scroll-column3 {
+				position: absolute;
+				top: 120px;
+				height: 200px;
+				width: 3650px;
+				float: right;
+				overflow: hidden;
+			}
+			.order_food_num {
+				margin-left: 40px;
+				font-size: small;
+				color: #7CC4E7;
+			}
+			.order_total_num {
+				margin-left: 20px;
+				color: #7CC4E7;
+			}
+			.order_food_name {
+				color: #D0D0D0;
+			}
+			.order_food_price {
+				color: #F0AD4E;
+			}
+			.order_total_money {
+				color: #F0AD4E;
+			}
+			
+			.table_num {
+				float: left;
+			}
+			.order_time {
+				margin-left: 20px;
+			}
+			
+		</style>
+		
+	</head>
+
+	<body>
+		<h3><b>CAT美味餐饮</b></h3>
+		<p>订单详情</p>
+		<div style="height: 40px; width: 365px;">
+		<span class="table_num"></span>
+		<span class="order_time"></span>
+		</div>
+		<div id="mui-scroll-column3" class="mui-scroll-wrapper">
+			<div id="foodOrder" class="mui-scroll" style="height: 650px; width: 365px;">
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+				<div class="js-mui-control-item3" style="height: 50px;"></div>
+			</div>
+		</div>
+		
+		<div id="foodPrice" style="height: 100px; width: 365px; position: absolute; top: 340px;">
+			<span class="order_total_money" style="height: 40px;"></span>
+			<span class="order_total_num" style="height: 40px;"></span>
+		</div>
+		
+	
+		<script type="text/javascript" charset="utf-8">
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			(function($) {
+				$('#mui-scroll-column3').scroll({
+					indicators: true //是否显示滚动条
+
+				});
+			})(mui);
+		</script>
+	</body>
+
+</html>
