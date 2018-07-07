@@ -23,8 +23,7 @@
 |Summary                  |	合计                           |	  55	               |          72           |
 
 ### 三、个人分支的git统计报告
-![avatar](images/GIT_1.png)
-![avatar](images/GIT_2.png)
+![avatar](images/Kimgl_gra.png)
 
 ### 四、个人体会
 通过进行后端的开发，了解到nodejs语言、express框架及mongodb。透过整个的开发对后端的运作有了初步的认识，包括服务器的搭建（利用阿里云）、环境的配置、与
