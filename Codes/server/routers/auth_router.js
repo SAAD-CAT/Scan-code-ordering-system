@@ -30,7 +30,7 @@ module.exports = function(app) {
 	});
 	
 	// render security-document
-	app.get('renderSecurityDocument', function(req, res) {
+	app.get('/renderSecurityDocument', function(req, res) {
 		res.render('security-document/security-document.html');
 	});
 	
