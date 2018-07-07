@@ -125,7 +125,7 @@ function read_menu_from_server() {
 			'Content-Type': 'application/json;charset=UTF-8',
 		},
 		success: function(json_menus) {
-			alert("请求成功了！yyp");
+			//alert("请求成功了！yyp");
 			//alert(json_menus);
 			//var menus = JSON.parse(json_menus);
 			//var menus = json_menus.data;
@@ -273,9 +273,6 @@ function append_column_food() {
 }
 /*---------------------------------------------------------------------------------*/
 
-//var amount = 0;
-//var money = 0;
-
 function buy_food() {
 	//var col_plus_id = 1;
 	//var row_plus_id = 21;
@@ -422,19 +419,15 @@ var obj;
 function pay() {
 
 	$(".basket-description").on('click', function() {
-		//alert("您消费金额总共为：" + money);
 		//e.preventDefault();
 		calculate_order();
 		sendJson();
-		//showOrder();
 	});
 
 }
 
 function calculate_order() {
 	$(".num").each(function() {
-		//alert("yyp");
-		//console.log($(this).text());
 		if($(this).text() != "") {
 			//alert("abc");
 			menu_name = $(this).parents(".food-description").find(".food_name").text();
@@ -468,9 +461,7 @@ function calculate_order() {
 }
 
 function sendJson() {
-	//calculate_order();
 	var time = new Date();
-	//alert(time);
 	total_num = String(total_num);
 	total_price = '$' + String(total_price);
 	
@@ -478,19 +469,6 @@ function sendJson() {
 		restaurant_id: '123456',
 		table_num: '1',
 		order_time: time,
-		/*
-		menu: [{
-				'menu_name': encodeURI('麻辣烫'),
-				'price': '13',
-				'num': '3'
-			},
-			{
-				'menu_name': encodeURI('过桥米线', 'utf-8'),
-				'price': '21',
-				'num': '5'
-			}
-		],
-		*/
 		menu: menu,
 		total_num: total_num,
 		total_price: total_price
@@ -505,8 +483,7 @@ function sendJson() {
 			'Content-Type': 'application/json;charset=UTF-8',
 		},
 		success: function(data) {
-			alert("请求成功");
-			//show_order_page(data);
+			//alert("请求成功");
 		},
 		complete: function() {
 			location.href ="order.html";
@@ -516,10 +493,7 @@ function sendJson() {
 
 function show_order_page(order) {
 	var j=0;
-	//alert(order.menu);
-	//alert(JSON.parse(order.menu));
 	var menus=JSON.parse(order.menu);
-	//alert(menus.length);
 	for (var i=0; i < menus.length; i++) {
 		var column_food_html = '<h4 class="order_food_name"></h4><b class="order_food_price"></b><span class="order_food_num"></span>';
 		$(".js-mui-control-item3").eq(j).append(column_food_html);
@@ -527,7 +501,6 @@ function show_order_page(order) {
 		$(".order_food_price").eq(j).text("$" + menus[i].price);
 		$(".order_food_num").eq(j).text(menus[i].num);
 		j++;
-		//alert("yyp");
 	}
 	$(".order_total_money").text("总价： " + order.total_price);
 	$(".order_total_num").text("总数：" + order.total_num);
@@ -536,7 +509,6 @@ function show_order_page(order) {
 function showOrder() {
 	var j = 0;
 	$(".num").each(function() {
-		//alert("abcd");
 		if($(this).text() != "") {
 			var column_food_html = '<img class="order_food_image" width="100" height="72"><h4 class="order_food_name"></h4><span class="order_money">&yen;<b class="order_food_price"></b></span><p class="order_food_num"></p>';
 			$(".js-mui-control-item3").eq(j).append(column_food_html);

@@ -23,7 +23,7 @@ function get_orders() {
 		url:serve+'receiveOrders',
 		data:jsonStr,
 		success:function(orderdata){
-			alert("收到订单")
+			//alert("收到订单")
 			if (orderdata['data'].length>0) {
 				//alert("订单数量： " + orderdata.data.length);
 			    show_order_in_page_new_order(orderdata.data[0]);

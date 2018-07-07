@@ -137,7 +137,8 @@
 					"image/地址.jpg"
 				],
 				"refer": [
-					"order.html"
+					"order.html",
+					"security-document.html"
 				],
 				"priority": 0
 			},
@@ -155,7 +156,6 @@
 			"resources": [
 				"image/IMG_3446.PNG",
 				"css/jquery.mobile-1.4.5.min.css",
-				"security-document.html",
 				"js/index2.js",
 				"image/rice.png",
 				"js/jquery.mobile-1.4.5.min.js",
