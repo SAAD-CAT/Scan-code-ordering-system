@@ -18,7 +18,22 @@ module.exports = function(app) {
 		console.log('Wecome!');
 		//res.render('');
 	});
-
+	
+	// render index page
+	app.get('/restaurant', function(req, res) {
+		res.render('index/index.html');
+	});
+	
+	// render order page
+	app.get('/renderOrder', function(req, res) {
+		res.render('order/order.html');
+	});
+	
+	// render security-document
+	app.get('renderSecurityDocument', function(req, res) {
+		res.render('security-document/security-document.html');
+	});
+	
 	//render food lists
 	app.post('/restaurant',  restaurant.getRestaurantData);
 
