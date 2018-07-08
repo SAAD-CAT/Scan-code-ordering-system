@@ -14,21 +14,20 @@
 
 可看到如下页面：
 
-![1](F:\gitHub\Scan-code-ordering-system\Scan-code-ordering-system\Assets\Images\install_instruction\1.png)
+![1](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Assets/Images/install_instruction/1.png)
 
 
 
-下载图中的.apk文件到电脑，并将安装包发送到手机，在手机上打开安装包![2](F:\gitHub\Scan-code-ordering-system\Scan-code-ordering-system\Assets\Images\install_instruction\2.png)
+下载图中的.apk文件到电脑，并将安装包发送到手机，在手机上打开安装包![2](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Assets/Images/install_instruction/2.png)
 
 
 
 点击安装等待安装完成，安装完成后在手机桌面会出现如下图标
 
-![3](F:\gitHub\Scan-code-ordering-system\Scan-code-ordering-system\Assets\Images\install_instruction\3.png)
+![3](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Assets/Images/install_instruction/1.png)
 
 
 
 点击图标，若出现如下画面则说明安装成功
 
-![4](F:\gitHub\Scan-code-ordering-system\Scan-code-ordering-system\Assets\Images\install_instruction\4.png)
-
+![4](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Assets/Images/install_instruction/1.png)
