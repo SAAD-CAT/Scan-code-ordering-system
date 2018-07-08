@@ -5,7 +5,8 @@ module.exports = function(app) {
 	var restaurant = require('../controllers/restaurant_controller.js');
 	var system = require('../controllers/system_controller.js');
 
-	app.use('/static', express.static('./static'));
+	//app.use('/static', express.static('./static'));
+	app.use(express.static(require('/static').join(__dirname, 'views')));
 	
 
 

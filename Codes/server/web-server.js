@@ -30,7 +30,7 @@ app.use(session({
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
-app.engine('html', require('ejs').renderFile);
+app.engine('.html', require('ejs').renderFile);
 
 require('./routers/auth_router')(app);
 app.listen(80);
