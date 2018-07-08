@@ -24,10 +24,10 @@
 
 点击安装等待安装完成，安装完成后在手机桌面会出现如下图标
 
-![3](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Assets/Images/install_instruction/1.png)
+![3](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Assets/Images/install_instruction/3.png)
 
 
 
 点击图标，若出现如下画面则说明安装成功
 
-![4](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Assets/Images/install_instruction/1.png)
+![4](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Assets/Images/install_instruction/4.png)
