@@ -49,7 +49,7 @@ Romance cloud catering service platform
   * [inception meeting (part 1)](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/meeting-record.md)
   * [inception meeting (part 2)](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/meeting-record2.md)
 * X2 Tech/Work Report
-  * [李启明14331133-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/liqiming14331133/14331133_final_report.md)
+  * [KimgL14331133-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/liqiming14331133/14331133_final_report.md)
   * [zhuwh9-15331443-report](http://zhuwh9.xyz/final-report)
   * [Exocoetidate-Xuyouri 15331342-report](https://blog.csdn.net/qq_40127318/article/details/80870517)
   * [sysuts13-15331280-report](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/suhantian_15331280/FinalReport.md)
