@@ -38,20 +38,20 @@ var http = require('http');
 		method		: POST
  		path		: /restaurant
  *********************************************/
-// var data = JSON.stringify({
-// 	restaurant_id: '123456'
-// });
+var data = JSON.stringify({
+	restaurant_id: '123456'
+});
 
-// var options = {
-// 	host: '39.104.73.169',
-// 	path: '/restaurant',
-// 	port: '80',
-// 	method: 'POST',
-// 	headers: {
-//         'Content-Type':'application/json;charset=UTF-8',
-//         'Content-Length':data.length
-//     }
-// };
+var options = {
+	host: '192.168.59.160',
+	path: '/restaurant',
+	port: '5000',
+	method: 'POST',
+	headers: {
+        'Content-Type':'application/json;charset=UTF-8',
+        'Content-Length':data.length
+    }
+};
 
 
 
@@ -70,9 +70,9 @@ var http = require('http');
 // });
 
 // var options = {
-// 	host: '39.104.73.169',
+// 	host: '192.168.59.160',
 // 	path: '/addFood',
-// 	port: '80',
+// 	port: '5000',
 // 	method: 'POST',
 // 	headers: {
 //         'Content-Type':'application/json;charset=UTF-8',
@@ -135,22 +135,22 @@ var http = require('http');
 		method		: POST
  		path		: /receiveOrders
  *********************************************/
-var time = new Date();
-var data = JSON.stringify({
-	restaurant_id: '123456',
-	order_time: time
- });
+// var time = new Date();
+// var data = JSON.stringify({
+// 	restaurant_id: '123456',
+// 	order_time: time
+//  });
 
-var options = {
-	host: '39.104.73.169',
-	path: '/receiveOrders',
-	port: '80',
-	method: 'POST',
-	headers: {
-        'Content-Type':'application/json;charset=UTF-8',
-        'Content-Length':data.length
-    }
-};
+// var options = {
+// 	host: '39.104.73.169',
+// 	path: '/receiveOrders',
+// 	port: '80',
+// 	method: 'POST',
+// 	headers: {
+//         'Content-Type':'application/json;charset=UTF-8',
+//         'Content-Length':data.length
+//     }
+// };
 
 /**********************************************
 		descrition  : a wrong request url will return error json message

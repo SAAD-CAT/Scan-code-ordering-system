@@ -5,6 +5,7 @@ var v = new Array(20);
 var amount = 0;
 var money = 0;
 window.onload = function() {
+	alert("yyp");
 	init();
 	buy_food();
 	pay();
@@ -113,12 +114,13 @@ function init() {
 }
 
 function read_menu_from_server() {
+	alert("abc");
 	var jsonStr = JSON.stringify({
 		restaurant_id: '123456'
 	});
 	$.ajax({
 		type: 'POST',
-		url: serve + "restaurant",
+		url:  "/restaurant",
 		data: jsonStr,
 		//async: false,
 		headers: {
@@ -486,7 +488,8 @@ function sendJson() {
 			//alert("请求成功");
 		},
 		complete: function() {
-			location.href ="order.html";
+			location.href ="/renderOrder";
+			//$.get()
 		}
 	});
 }

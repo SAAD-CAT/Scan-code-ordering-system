@@ -19,9 +19,14 @@ module.exports = function(app) {
 		console.log('Wecome!');
 		res.render('home/home');
 	});
+
+	app.get('/movielist', function(req, res) {
+		console.log('Wecome!');
+		res.render('movielist/movielist');
+	});
 	
 	// render index page
-	app.get('/restaurant', function(req, res) {
+	app.get('/renderRestaurant', function(req, res) {
 		res.render('index/index');
 	});
 	
