@@ -12,7 +12,7 @@ Romance cloud catering service platform
 | 15331369 | YYPyyp  |  技术   |     技术经理，前端工程师      | 下午班  |
 | 15331280 | sysuts13  |  产品   |      产品经理，产品设计      | 下午班  |
 | 15331342 | Exocoetidate-Xuyouri  |  技术   | JavaScript工程师，后端工程师 | 下午班  |
-| 14331133 | 李啟明  |  技术   |        后端工程师        | 下午班  |
+| 14331133 | KimgL |  技术   |        后端工程师        | 下午班  |
 | 15331443 | zhuwh9  |  技术   |     后端工程师，数据库维护     | 下午班  |
 | 15331049 | chengwch  | 产品 |        需求分析与设计        | 上午班  |
 
