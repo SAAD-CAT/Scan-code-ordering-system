@@ -31,7 +31,7 @@ Romance cloud catering service platform
   * 6.6、[Supplementary Requirements(补充需求)](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/supple-requirement.md)
 * 7、Design(设计)
   * 7.1、UI design
-    * [餐厅端 用例 UI设计](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/UI_design.md)
+    * [餐厅端客户端 用例 UI设计](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/UI_design.md)
   * [7.2 Database design](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/task7_database_design.md)
     * [7.2.1 用户及权限系统数据库设计](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/task7_database_design.md)
     * [7.2.2 订餐系统数据库设计](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/Documents/task7_database_design.md)
