@@ -5,7 +5,6 @@ var v = new Array(20);
 var amount = 0;
 var money = 0;
 window.onload = function() {
-	alert("yyp");
 	init();
 	buy_food();
 	pay();
@@ -114,7 +113,6 @@ function init() {
 }
 
 function read_menu_from_server() {
-	alert("abc");
 	var jsonStr = JSON.stringify({
 		restaurant_id: '123456'
 	});
