@@ -30,7 +30,7 @@
 
 #### 3. 个人分支统计报告
 
-![reportImage](https://github.com/SAAD-CAT/Scan-code-ordering-system/blob/master/report/chengwch_15331049/reportImage.png)
+![reportImage](https://github.com/Chengwch/my-repository/blob/master/reportImage1.png)
 
 
 
